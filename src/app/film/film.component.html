@@ -1,0 +1,41 @@
+
+    <div class="container">
+
+        <h1 class="centro espacios">{{ film.title }}</h1>
+
+        <div class="row">
+            <div class="col-md-3">
+                <h4 class="centro espacios-min">Personajes</h4>
+                <ul *ngFor="let person of character">
+                    <li class="estilo-ul"><a class="color" href="/person/{{person.url.split('/')[5]}}">{{ person.name }}</a></li>
+                </ul>
+            </div>
+    
+            <div class="col-md-3">
+                <h4 class="centro espacios-min">Planetas</h4>
+                <ul *ngFor="let planets of planet">
+                    <span *ngIf="planets"><li class="estilo-ul">{{ planets.name }}</li></span>
+                </ul>
+                <p *ngIf="planet.length == 0">no hay planetas</p>
+            </div>
+    
+            <div class="col-md-3">
+                <h4 class="centro espacios-min">Naves Estelares</h4>
+                <ul *ngFor="let starships of starship">
+                    <span *ngIf="starships"><li class="estilo-ul">{{ starships.name }}</li></span>
+                </ul>
+                <p *ngIf="starship.length == 0">no hay naves espaciales </p>
+            </div>
+    
+            <div class="col-md-3">
+                <h4 class="centro espacios-min">Vehiculos</h4>
+                <ul *ngFor="let vehicles of vehicle">
+                    <span *ngIf="vehicles"><li class="estilo-ul">{{ vehicles.name }}</li></span>
+                </ul>
+                <p *ngIf="vehicle.length == 0">no hay vehiculos </p>
+            </div>
+        </div>
+
+    </div>
+    
+    

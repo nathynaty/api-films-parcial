@@ -1,0 +1,22 @@
+.centro{
+    text-align: center;
+}
+    
+.estilo-ul{
+    list-style:none!important;
+}
+
+.color{
+    color: black;
+}
+
+body > app-root > app-home > div > ul:nth-child(2) > li > a:link, a:visited, a:active {
+    text-decoration:none!important;
+}
+.espacios{
+    height: 100px;
+}
+.espacios-min{
+    height: 40px;
+}
+

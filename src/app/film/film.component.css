@@ -1,0 +1,19 @@
+.centro{
+    text-align: center;
+}
+    
+.estilo-ul{
+    list-style:none!important;
+}
+
+.color{
+    color: black;
+}
+
+.espacios{
+    height: 100px;
+}
+.espacios-min{
+    height: 40px;
+}
+

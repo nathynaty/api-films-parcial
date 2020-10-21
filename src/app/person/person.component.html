@@ -1,0 +1,44 @@
+
+    <div class="container">
+        <h1 class="centro espacios">{{ person.name }}</h1>
+        <br>
+
+        <div class="row">
+            <div class="col-md-3">
+                <h4 class="centro espacios-min">Especie</h4>
+                <ul *ngFor="let species of specie">
+                    <span *ngIf="species"><li class="estilo-ul">{{ species.name }}</li></span>
+                </ul>
+                <p *ngIf="specie.length == 0">no pertenece a una especie</p>
+            </div>
+            
+            <div class="col-md-3">
+                <h4 class="centro espacios-min">Peliculas</h4>
+                <ul *ngFor="let film of movie">
+                    <li class="estilo-ul"><a class="color" href="/film/{{film.url.split('/')[5]}}">{{ film.title }}</a></li>
+                </ul>
+            </div>
+            
+            <div class="col-md-3">
+                <h4 class="centro espacios-min">Vehiculos</h4>
+                <ul *ngFor="let vehicles of vehicle">
+                    <span *ngIf="vehicles"><li class="estilo-ul">{{ vehicles.name }}</li></span>
+                </ul>
+                <p *ngIf="vehicle.length == 0">no hay vehiculos</p>
+            </div>
+            
+            <div class="col-md-3">
+                <h4 class="centro espacios-min">Naves Estelares</h4>
+                <ul *ngFor="let starships of starship">
+                    <span *ngIf="starships"><li class="estilo-ul">{{ starships.name }}</li></span>
+                </ul>
+                <p *ngIf="starship.length == 0">no hay naves estelares</p>
+            </div>
+
+        </div>
+        
+    </div>
+    
+    
+
+
